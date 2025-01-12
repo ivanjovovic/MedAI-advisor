@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedAI Advisor</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <h1>🩺 MedAI Advisor</h1>
+    <form id="healthForm">
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Glavobolja"> Glavobolja</label>
+        <label><input type="checkbox" value="Groznica"> Groznica</label>
+        <label><input type="checkbox" value="Bol u stomaku"> Bol u stomaku</label>
+        <label><input type="checkbox" value="Kašalj"> Kašalj</label>
+        <label><input type="checkbox" value="Bol u grudima"> Bol u grudima</label>
+        <label><input type="checkbox" value="Utrnulost"> Utrnulost ruku ili nogu</label>
+      </div>
+      
+
+      <h3><i class="fa-solid fa-clock"></i> Trajanje simptoma:</h3>
+      <label><input type="radio" name="duration" value="<24h"> Manje od 24h</label>
+      <label><input type="radio" name="duration" value="1–3 dana"> 1–3 dana</label>
+      <label><input type="radio" name="duration" value=">3 dana"> Više od 3 dana</label>
+
+      <h3><i class="fa-solid fa-users"></i> Starosna grupa:</h3>
+      <select id="ageGroup">
+        <option value="0–12">Deca (0–12 godina)</option>
+        <option value="13–19">Tinejdžeri (13–19 godina)</option>
+        <option value="20–59">Odrasli (20–59 godina)</option>
+        <option value="60+">Stariji (60+ godina)</option>
+      </select>
+
+      <h3><i class="fa-solid fa-notes-medical"></i> Vrsta saveta:</h3>
+      <label><input type="checkbox" value="Preventivni saveti"> Preventivni saveti</label>
+      <label><input type="checkbox" value="Mogući uzroci"> Mogući uzroci</label>
+      <label><input type="checkbox" value="Preporuke za specijaliste"> Preporuke za specijaliste</label>
+      <label><input type="checkbox" value="Hitna pomoć"> Hitna pomoć</label>
+
+      <h3><i class="fa-solid fa-file-alt"></i> Detaljan opis simptoma:</h3>
+      <textarea id="detailedSymptoms" placeholder="Opišite simptome u detalje..."></textarea>
+
+      <button type="submit"><i class="fa-solid fa-magic"></i> Generiši savete</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
